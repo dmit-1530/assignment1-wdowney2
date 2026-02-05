@@ -1,9 +1,106 @@
 /* ***************** utilities & containers ***************** */
 
+header,
+main,
+footer {
+    padding: 1.63rem 6.25rem;
+}
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.25rem 2.06rem;
+}
 
 /* ***************** global typography ***************** */
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
+    width: 108rem;
+}
+
+ul {
+    list-style: initial;
+}
+
 /* ***************** header & footer ***************** */
 
+header,
+footer {
+    background-color: #0C4A6E;
+}
+
+h1 {
+    font-size: 1.625rem;
+    color: #ffffff;
+}
+
+footer {
+    color: #fafafa;
+}
+
 /* ***************** main content ***************** */
+
+main {
+    padding-top: 0;
+    padding-bottom: 0rem;
+}
+
+.container > section {
+    margin-bottom: 6rem;
+}
+
+h2 {
+    font-size: 3.75rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.125rem;
+}
+
+.team > .flex-container > section {
+    display: flex; /* Flexbox is an easy and fun way to center-align anything! */
+    gap: 3.5rem;
+    align-items: center;
+    width: calc(50% - 1.03rem); 
+    box-sizing: border-box;
+    padding: 2.5rem 1.75rem;
+}
+.team img {
+    width: 12.5rem;
+    height: 12.5rem;
+    aspect-ratio: 1;
+}
+
+.plan,
+.team > .flex-container > section {
+    background-color: #00000033;
+}
+
+.plan {
+    flex: 1 1 0; /* I'm gonna be honest with you. This is easier than figuring out what to put in a calc() for the width and it gets me to the same place */
+    padding: 1.75rem;
+}
+
+.plan,
+.plan section {
+    /* Most straightforward way to replicate the strange and ugly alignment behaviour in the figma file */
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan p:last-child {
+    font-size: 1.5rem;
+    color: #0c4a6e;
+    font-weight: bold;
+}
